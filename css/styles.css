@@ -152,10 +152,10 @@ img, svg { display: block; max-width: 100%; }
   background: linear-gradient(90deg, #FFFFFF 0%, rgba(255,255,255,.88) 18%, rgba(255,255,255,0) 40%);
 }
 .hero-inner {
-  position: relative; z-index: 3; width: 100%; max-width: var(--maxw); margin: 0 auto;
-  padding: 48px 24px;
+  position: relative; z-index: 3; width: 100%; max-width: none; margin: 0;
+  padding: 48px 24px 48px clamp(28px, 4vw, 64px);
 }
-.hero-copy { max-width: 420px; }
+.hero-copy { max-width: 520px; }
 .eyebrow {
   display: inline-flex; align-items: center; gap: 8px;
   font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
