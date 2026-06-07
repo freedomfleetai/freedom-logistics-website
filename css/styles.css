@@ -148,11 +148,11 @@ img, svg { display: block; max-width: 100%; }
   background: radial-gradient(circle, rgba(13,43,94,.06), rgba(13,43,94,0) 70%); pointer-events: none; z-index: 0;
 }
 .hero::after {                                /* left to right white blend so the image fades into the page */
-  content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  content: ""; position: absolute; inset: 0; z-index: 2; pointer-events: none;
   background: linear-gradient(90deg, #FFFFFF 0%, rgba(255,255,255,.88) 18%, rgba(255,255,255,0) 40%);
 }
 .hero-inner {
-  position: relative; z-index: 2; width: 100%; max-width: var(--maxw); margin: 0 auto;
+  position: relative; z-index: 3; width: 100%; max-width: var(--maxw); margin: 0 auto;
   padding: 48px 24px;
 }
 .hero-copy { max-width: 420px; }
@@ -168,16 +168,21 @@ img, svg { display: block; max-width: 100%; }
 .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; }
 
 /* ---------- Hero visual: full-height, right-bleeding, integrated (no card) ---------- */
-.hero-visual {
-  position: absolute; inset: 0; z-index: 0;   /* full hero band, underneath the text */
+/* Layer 1: DC yard background (fills the hero band) */
+.hero-bg {
+  position: absolute; inset: 0; z-index: 0;
+  background-color: #EAF0F7;   /* fallback until the .webp is placed */
+  background-image: url('../assets/hero/dc-yard-background.webp');
+  background-size: cover; background-position: center;
 }
-.hero-composition {
-  display: block; width: 100%; height: 100%;
-  object-fit: cover;            /* fills the whole hero area between nav and stat strip */
-  object-position: center;
-  border: none; box-shadow: none; border-radius: 0;
+/* Layer 2: Freedom trailer — large on the right */
+.hero-trailer {
+  position: absolute; z-index: 1;
+  right: 0; top: 54%; transform: translateY(-50%);
+  width: 58%; max-width: 940px; height: auto;
+  filter: drop-shadow(0 22px 38px rgba(11,18,32,.22));
 }
-/* Independent FreedomFleet dashboard overlay (HTML/CSS) — sits right of the headline */
+/* Layer 3: Independent FreedomFleet dashboard overlay (HTML/CSS) — right of the headline */
 .hero-dash {
   position: absolute; z-index: 2;
   top: 50%; right: 13%; transform: translateY(-50%);
@@ -313,8 +318,7 @@ img, svg { display: block; max-width: 100%; }
   .hero-inner { order: 1; padding: 88px 24px 24px; }
   .hero-copy { max-width: none; }
   .hero-dash { position: static; transform: none; width: 100%; max-width: 460px; margin-top: 22px; }
-  .hero-visual { position: static; width: 100%; order: 2; margin-bottom: 8px; }
-  .hero-composition { height: auto; }
+  .hero-trailer { position: static; transform: none; width: 100%; max-width: 520px; margin: 10px auto 0; order: 2; }
   .hero::after { display: none; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .stat:nth-child(2n) { border-right: none; }
