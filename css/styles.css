@@ -180,7 +180,7 @@ img, svg { display: block; max-width: 100%; }
   position: absolute; z-index: 1;
   right: 0; bottom: 6%;
   width: 76%; max-width: 1120px; height: auto;
-  filter: drop-shadow(0 22px 20px rgba(11,18,32,.32));
+  filter: drop-shadow(0 16px 16px rgba(11,18,32,.26));
 }
 /* Layer 3: Independent FreedomFleet dashboard overlay (HTML/CSS) — right of the headline */
 .hero-dash {
