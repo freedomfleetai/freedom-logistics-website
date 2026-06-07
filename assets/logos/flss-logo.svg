@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 44" role="img" aria-label="Freedom Logistics Service Solutions">
+  <!-- mark -->
+  <rect x="0" y="6" width="32" height="32" rx="7" fill="#0D2B5E"/>
+  <rect x="19" y="11" width="9" height="5" rx="1.5" fill="#C41E2A"/>
+  <text x="15" y="30" text-anchor="middle" font-family="'Sora',Arial,sans-serif" font-weight="800" font-size="20" fill="#ffffff">F</text>
+  <!-- wordmark -->
+  <text x="42" y="22" font-family="'Sora',Arial,sans-serif" font-weight="800" font-size="18" letter-spacing="-0.5" fill="#0B1220">FREEDOM</text>
+  <text x="42" y="35" font-family="'DM Sans',Arial,sans-serif" font-weight="600" font-size="8" letter-spacing="1.4" fill="#64748B">LOGISTICS SERVICE SOLUTIONS</text>
+</svg>
