@@ -156,6 +156,14 @@ img, svg { display: block; max-width: 100%; }
   padding: 48px 24px 48px clamp(28px, 4vw, 64px);
 }
 .hero-copy { max-width: 520px; }
+/* Layer 3: FreedomFleet dashboard overlay — framed floating card, right side */
+.hero-dash-img {
+  position: absolute; z-index: 4;
+  right: clamp(24px, 4vw, 64px); top: 50%; transform: translateY(-50%);
+  width: 40%; max-width: 520px; height: auto;
+  border-radius: 14px; border: 1px solid rgba(255,255,255,.65);
+  box-shadow: 0 30px 60px rgba(11,18,32,.30);
+}
 .eyebrow {
   display: inline-flex; align-items: center; gap: 8px;
   font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
@@ -319,6 +327,7 @@ img, svg { display: block; max-width: 100%; }
   .hero-copy { max-width: none; }
   .hero-dash { position: static; transform: none; width: 100%; max-width: 460px; margin-top: 22px; }
   .hero-trailer { position: static; transform: none; width: 100%; max-width: 520px; margin: 10px auto 0; order: 2; }
+  .hero-dash-img { position: static; transform: none; width: 100%; max-width: 520px; margin: 22px auto 0; }
   .hero::after { display: none; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .stat:nth-child(2n) { border-right: none; }
