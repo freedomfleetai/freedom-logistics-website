@@ -160,7 +160,7 @@ img, svg { display: block; max-width: 100%; }
 .hero-dash-img {
   position: absolute; z-index: 4;
   left: calc(clamp(28px, 4vw, 64px) + 570px); right: auto; bottom: 9%; top: auto; transform: none;
-  width: 37%; max-width: 500px; height: auto;
+  width: 39%; max-width: 540px; height: auto;
   border-radius: 14px; border: 1px solid rgba(255,255,255,.65);
   box-shadow: 0 30px 60px rgba(11,18,32,.30);
 }
