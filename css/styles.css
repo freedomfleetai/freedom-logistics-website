@@ -141,15 +141,21 @@ img, svg { display: block; max-width: 100%; }
   position: relative; overflow: hidden;
   background: linear-gradient(180deg, #FFFFFF 0%, #F3F7FC 100%);
   border-bottom: 1px solid var(--border);
+  min-height: 600px; display: flex; align-items: center;
 }
-.hero::before {                               /* soft brand glow, not an illustration */
+.hero::before {                               /* soft brand glow */
   content: ""; position: absolute; top: -140px; right: -120px; width: 520px; height: 520px;
-  background: radial-gradient(circle, rgba(13,43,94,.07), rgba(13,43,94,0) 70%); pointer-events: none;
+  background: radial-gradient(circle, rgba(13,43,94,.06), rgba(13,43,94,0) 70%); pointer-events: none; z-index: 0;
+}
+.hero::after {                                /* left to right white blend so the image fades into the page */
+  content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: linear-gradient(90deg, #FFFFFF 0%, rgba(255,255,255,.94) 24%, rgba(255,255,255,0) 56%);
 }
 .hero-inner {
-  position: relative; z-index: 1; max-width: var(--maxw); margin: 0 auto;
-  padding: 128px 24px 120px; display: grid; grid-template-columns: 1fr 1.1fr; gap: 60px; align-items: center;
+  position: relative; z-index: 2; width: 100%; max-width: var(--maxw); margin: 0 auto;
+  padding: 48px 24px;
 }
+.hero-copy { max-width: 540px; }
 .eyebrow {
   display: inline-flex; align-items: center; gap: 8px;
   font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
@@ -161,26 +167,17 @@ img, svg { display: block; max-width: 100%; }
 .hero .lead { font-size: 18.5px; color: var(--body); max-width: 540px; margin-bottom: 34px; }
 .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; }
 
-/* ---------- Hero portal dashboard (premium SaaS overlay on fleet-yard image) ---------- */
-.hero-visual { position: relative; }
-/* Layered hero visual: clean fleet-yard/trailer background + HTML dashboard overlay. */
-.hero-stage {
-  position: relative; border-radius: 22px; overflow: hidden;
-  background-image:
-    linear-gradient(180deg, rgba(11,18,32,.22) 0%, rgba(11,18,32,.04) 24%, rgba(255,255,255,0) 42%),
-    url('../assets/hero/fleet-yard-trailer.png');
-  background-size: cover; background-position: center 30%;
-  box-shadow: var(--shadow-lg); border: 1px solid rgba(255,255,255,.6);
-  padding: 150px 18px 18px;
+/* ---------- Hero visual: full-height, right-bleeding, integrated (no card) ---------- */
+.hero-visual {
+  position: absolute; top: 0; right: 0; bottom: 0; width: 70%; z-index: 0;
+  display: flex; align-items: center; justify-content: flex-end;
 }
-.stage-chip {
-  position: absolute; top: 16px; left: 18px; z-index: 2;
-  display: inline-flex; align-items: center; gap: 7px;
-  background: rgba(255,255,255,.94); border: 1px solid rgba(255,255,255,.7);
-  color: var(--ink); font-size: 11.5px; font-weight: 600; padding: 6px 12px; border-radius: 20px;
-  box-shadow: 0 6px 18px rgba(11,18,32,.22);
+.hero-composition {
+  display: block; width: 100%; height: 100%;
+  object-fit: contain;          /* keep aspect — never crops dashboard/trailer/yard */
+  object-position: right center;
+  border: none; box-shadow: none; border-radius: 0;
 }
-.stage-chip .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); }
 .portal-card {
   position: relative; z-index: 1;
   background: #fff; border: 1px solid var(--border); border-radius: 18px;
@@ -306,8 +303,12 @@ img, svg { display: block; max-width: 100%; }
 
 /* ---------- Mobile ---------- */
 @media (max-width: 980px) {
-  .hero-inner { grid-template-columns: 1fr; gap: 40px; padding: 96px 24px 80px; }
-  .hero-stage { padding: 120px 14px 14px; }
+  .hero { min-height: auto; display: block; }
+  .hero-inner { padding: 88px 24px 64px; }
+  .hero-copy { max-width: none; }
+  .hero-visual { position: static; width: 100%; margin-top: 18px; }
+  .hero-composition { height: auto; }
+  .hero::after { display: none; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .stat:nth-child(2n) { border-right: none; }
   .stat { border-bottom: 1px solid var(--border); }
