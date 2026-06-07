@@ -172,7 +172,7 @@ img, svg { display: block; max-width: 100%; }
 .hero-bg {
   position: absolute; inset: 0; z-index: 0;
   background-color: #EAF0F7;   /* fallback until the .webp is placed */
-  background-image: url('../assets/hero/dc-yard-background.png');
+  background-image: url('../assets/hero/flss-hero-live.png');
   background-size: cover; background-position: center;
 }
 /* Layer 2: Freedom trailer — large on the right */
