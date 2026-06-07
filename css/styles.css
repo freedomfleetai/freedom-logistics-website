@@ -256,6 +256,9 @@ img, svg { display: block; max-width: 100%; }
   letter-spacing: -.02em; color: var(--ink); text-align: center;
 }
 
+/* ---------- Section 2 (begins after the locked hero) ---------- */
+.section-2 { background: #fff; padding-top: 100px; }
+
 /* ---------- Stats ---------- */
 .stats { background: var(--white); border-bottom: 1px solid var(--border); }
 .stats-grid { display: grid; grid-template-columns: repeat(5, 1fr); max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
