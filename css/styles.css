@@ -178,14 +178,14 @@ img, svg { display: block; max-width: 100%; }
 /* Layer 2: Freedom trailer — large on the right */
 .hero-trailer {
   position: absolute; z-index: 1;
-  right: 0; top: 54%; transform: translateY(-50%);
-  width: 58%; max-width: 940px; height: auto;
-  filter: drop-shadow(0 22px 38px rgba(11,18,32,.22));
+  right: 0; bottom: 6%;
+  width: 76%; max-width: 1120px; height: auto;
+  filter: drop-shadow(0 22px 20px rgba(11,18,32,.32));
 }
 /* Layer 3: Independent FreedomFleet dashboard overlay (HTML/CSS) — right of the headline */
 .hero-dash {
   position: absolute; z-index: 2;
-  top: 50%; right: 13%; transform: translateY(-50%);
+  top: 50%; right: 6%; transform: translateY(-50%);
   width: 390px; max-width: 40%;
 }
 .hero-dash .portal-card { width: 100%; }
