@@ -159,8 +159,8 @@ img, svg { display: block; max-width: 100%; }
 /* Layer 3: FreedomFleet dashboard overlay — framed floating card, right side */
 .hero-dash-img {
   position: absolute; z-index: 4;
-  right: clamp(24px, 4vw, 64px); top: 50%; transform: translateY(-50%);
-  width: 40%; max-width: 520px; height: auto;
+  right: 19%; bottom: 5%; top: auto; transform: none;
+  width: 42%; max-width: 560px; height: auto;
   border-radius: 14px; border: 1px solid rgba(255,255,255,.65);
   box-shadow: 0 30px 60px rgba(11,18,32,.30);
 }
