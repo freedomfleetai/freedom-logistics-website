@@ -163,11 +163,24 @@ img, svg { display: block; max-width: 100%; }
 
 /* ---------- Hero portal dashboard (premium SaaS overlay on fleet-yard image) ---------- */
 .hero-visual { position: relative; }
-/* Right-side hero visual = approved render, cropped to the trailer + dashboard portion. */
-.hero-img {
-  width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 86% center;
-  border-radius: 22px; border: 1px solid var(--border); box-shadow: var(--shadow-lg); display: block;
+/* Layered hero visual: clean fleet-yard/trailer background + HTML dashboard overlay. */
+.hero-stage {
+  position: relative; border-radius: 22px; overflow: hidden;
+  background-image:
+    linear-gradient(180deg, rgba(11,18,32,.22) 0%, rgba(11,18,32,.04) 24%, rgba(255,255,255,0) 42%),
+    url('../assets/hero/fleet-yard-trailer.png');
+  background-size: cover; background-position: center 30%;
+  box-shadow: var(--shadow-lg); border: 1px solid rgba(255,255,255,.6);
+  padding: 150px 18px 18px;
 }
+.stage-chip {
+  position: absolute; top: 16px; left: 18px; z-index: 2;
+  display: inline-flex; align-items: center; gap: 7px;
+  background: rgba(255,255,255,.94); border: 1px solid rgba(255,255,255,.7);
+  color: var(--ink); font-size: 11.5px; font-weight: 600; padding: 6px 12px; border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(11,18,32,.22);
+}
+.stage-chip .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); }
 .portal-card {
   position: relative; z-index: 1;
   background: #fff; border: 1px solid var(--border); border-radius: 18px;
@@ -294,7 +307,7 @@ img, svg { display: block; max-width: 100%; }
 /* ---------- Mobile ---------- */
 @media (max-width: 980px) {
   .hero-inner { grid-template-columns: 1fr; gap: 40px; padding: 96px 24px 80px; }
-  .hero-img { aspect-ratio: 16 / 11; object-position: 80% center; }
+  .hero-stage { padding: 120px 14px 14px; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .stat:nth-child(2n) { border-right: none; }
   .stat { border-bottom: 1px solid var(--border); }
