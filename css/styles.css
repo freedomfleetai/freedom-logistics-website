@@ -338,7 +338,7 @@ img, svg { display: block; max-width: 100%; }
 .trailer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; max-width: var(--maxw); margin: 0 auto; }
 .trailer-tile { text-align: center; }
 .trailer-img {
-  background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+  background: #fff; border: 1px solid var(--border); border-radius: 14px;
   height: 168px; display: flex; align-items: center; justify-content: center; padding: 22px;
 }
 .trailer-img img { max-height: 120px; width: auto; }
