@@ -361,17 +361,30 @@ img, svg { display: block; max-width: 100%; }
 .trailer-label { margin-top: 14px; font-family: 'Sora', sans-serif; font-weight: 700; font-size: 16px; color: var(--ink); }
 
 /* Section 4 — Services */
-.service-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+.services-head .svc-eyebrow {
+  display: block; text-transform: uppercase; font-size: 13px; font-weight: 500;
+  letter-spacing: 0.14em; color: #C8102E; margin-bottom: 12px;
+}
+.services-head h2 { color: #0C2340; }
+.svc-underline { display: block; width: 52px; height: 3px; background: #C8102E; border-radius: 2px; margin: 18px auto 0; }
+.service-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.flagship-badge {
+  display: inline-block; font-size: 9.5px; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: #fff; background: #C8102E; padding: 3px 8px; border-radius: 5px; margin-bottom: 10px;
+}
 .service-card {
   background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 20px;
   transition: transform .16s ease, box-shadow .16s ease, border-color .16s ease;
 }
 .service-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--border-2); }
 .svc-ic {
-  width: 42px; height: 42px; border-radius: 11px; background: var(--navy-bg); color: var(--navy);
-  display: flex; align-items: center; justify-content: center; margin-bottom: 14px;
+  width: 52px; height: 52px; border-radius: 14px;
+  display: flex; align-items: center; justify-content: center; margin-bottom: 16px;
+  background: linear-gradient(155deg, #163A5F, #0A1E36);
+  box-shadow: 0 8px 18px rgba(12,35,64,0.30), inset 0 1px 0 rgba(255,255,255,0.06);
+  border: 0.5px solid rgba(255,255,255,0.06);
 }
-.svc-ic svg { width: 22px; height: 22px; }
+.svc-ic svg { width: 27px; height: 27px; }
 .service-card h3 { font-size: 14.5px; font-weight: 700; color: var(--ink); margin-bottom: 6px; line-height: 1.25; }
 .service-card p { font-size: 12.5px; color: var(--muted); line-height: 1.5; }
 
