@@ -339,9 +339,13 @@ img, svg { display: block; max-width: 100%; }
 .trailer-tile { text-align: center; }
 .trailer-img {
   background: #fff; border: 1px solid var(--border); border-radius: 14px;
-  height: 168px; display: flex; align-items: center; justify-content: center; padding: 22px;
+  height: 194px;                                  /* ~15% larger card */
+  display: flex; align-items: center; justify-content: center; padding: 18px;
 }
-.trailer-img img { max-height: 120px; width: auto; }
+.trailer-img img {
+  max-width: 84%; max-height: 100%;               /* ~80-85% width, never crops */
+  width: auto; height: auto; object-fit: contain; display: block;
+}
 .trailer-label { margin-top: 14px; font-family: 'Sora', sans-serif; font-weight: 700; font-size: 16px; color: var(--ink); }
 
 /* Section 4 — Services */
