@@ -390,7 +390,7 @@ img, svg { display: block; max-width: 100%; }
 
 /* Section 5 — Operating Locations: full composite image fit to the section */
 .section-block.pods { padding: 100px 0; }      /* extra breathing room */
-.pods .container { max-width: 1336px; }        /* scale the composite ~12% larger */
+.pods .container { max-width: 1496px; }        /* scale the composite larger (~25% over base) */
 .coverage-img { display: block; width: 100%; height: auto; margin: 0 auto; }
 
 /* Section 5 — Pods / Operating Locations (legacy classes, retained) */
