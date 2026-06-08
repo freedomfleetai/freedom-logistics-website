@@ -389,7 +389,9 @@ img, svg { display: block; max-width: 100%; }
 .service-card p { font-size: 12.5px; color: var(--muted); line-height: 1.5; }
 
 /* Section 5 — Operating Locations: full composite image fit to the section */
-.coverage-img { display: block; width: 100%; height: auto; }
+.section-block.pods { padding: 100px 0; }      /* extra breathing room */
+.pods .container { max-width: 1336px; }        /* scale the composite ~12% larger */
+.coverage-img { display: block; width: 100%; height: auto; margin: 0 auto; }
 
 /* Section 5 — Pods / Operating Locations (legacy classes, retained) */
 .pods-head .pods-eyebrow {
