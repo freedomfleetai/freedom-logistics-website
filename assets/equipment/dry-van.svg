@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 170" role="img" aria-label="Dry van trailer">
+  <rect x="34" y="36" width="226" height="86" rx="5" fill="#F4F7FB" stroke="#0D2B5E" stroke-width="4"/>
+  <rect x="34" y="36" width="226" height="10" rx="5" fill="#FFFFFF"/>
+  <g stroke="#CBD7E5" stroke-width="2"><line x1="84" y1="46" x2="84" y2="116"/><line x1="124" y1="46" x2="124" y2="116"/><line x1="164" y1="46" x2="164" y2="116"/></g>
+  <line x1="208" y1="40" x2="208" y2="118" stroke="#0D2B5E" stroke-width="3"/>
+  <rect x="214" y="70" width="6" height="20" rx="2" fill="#0D2B5E"/>
+  <rect x="52" y="122" width="192" height="8" fill="#0D2B5E"/>
+  <circle cx="190" cy="141" r="16" fill="#2B3340"/><circle cx="190" cy="141" r="7" fill="#AEB9C7"/>
+  <circle cx="226" cy="141" r="16" fill="#2B3340"/><circle cx="226" cy="141" r="7" fill="#AEB9C7"/>
+  <rect x="80" y="130" width="7" height="22" fill="#0D2B5E"/>
+  <rect x="96" y="130" width="7" height="22" fill="#0D2B5E"/>
+</svg>
