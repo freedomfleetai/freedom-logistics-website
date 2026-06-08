@@ -320,19 +320,30 @@ img, svg { display: block; max-width: 100%; }
 
 /* Section 2 — Industries */
 .industries { padding-bottom: 76px; }            /* top padding (100px) inherited from .section-2 */
-.industry-strip { display: flex; max-width: 1000px; margin: 0 auto; }
-.industry-tile {
-  flex: 1; display: flex; flex-direction: column; align-items: center; gap: 12px;
-  text-align: center; padding: 8px 18px; border-left: 1px solid var(--border);
+/* Upgraded header */
+.industries-head .ind-eyebrow {
+  display: block; text-transform: uppercase; font-size: 13px; font-weight: 500;
+  letter-spacing: 0.14em; color: #C8102E; margin-bottom: 12px;
 }
-.industry-tile:first-child { border-left: none; }
+.industries-head h2 { color: #0C2340; margin-bottom: 0; }
+.ind-underline { display: block; width: 52px; height: 3px; background: #C8102E; border-radius: 2px; margin: 14px auto 0; }
+.industries-head p { margin-top: 16px; }
+
+/* Navy gradient icon tiles, spread across a wider row */
+.industry-strip {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(136px, 1fr));
+  gap: 14px; max-width: 1080px; margin: 0 auto;
+}
+.industry-tile { display: flex; flex-direction: column; align-items: center; text-align: center; }
 .ind-icon {
-  width: 76px; height: 76px; border-radius: 50%;
-  background: var(--navy-bg); color: var(--navy);
+  width: 74px; height: 74px; border-radius: 16px;
   display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(155deg, #163A5F, #0A1E36);
+  box-shadow: 0 10px 24px rgba(12,35,64,0.32), inset 0 1px 0 rgba(255,255,255,0.06);
+  border: 0.5px solid rgba(255,255,255,0.06);
 }
-.ind-icon svg { width: 46px; height: 46px; }   /* ~35% larger than before */
-.ind-label { font-size: 14.5px; font-weight: 700; color: var(--ink); line-height: 1.3; }
+.ind-icon svg { width: 38px; height: 38px; }
+.ind-label { font-size: 12.5px; font-weight: 500; color: #0C2340; margin-top: 14px; line-height: 1.3; }
 
 /* Section 3 — Trailer Types */
 .trailer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; max-width: var(--maxw); margin: 0 auto; }
