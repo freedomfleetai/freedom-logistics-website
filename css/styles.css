@@ -474,8 +474,8 @@ img, svg { display: block; max-width: 100%; }
 .pillar h3 { font-family: 'Sora', sans-serif; font-size: 22px; font-weight: 800; color: #0C2340; text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 12px; }
 .pillar h3::after { content: ""; display: block; width: 36px; height: 3px; background: #C8102E; border-radius: 2px; margin: 12px auto 0; }
 .pillar p { font-size: 14.5px; color: var(--body); line-height: 1.6; max-width: 290px; margin: 0 auto; }
-.pillar-arrow { display: flex; align-items: center; color: #C8102E; flex-shrink: 0; padding-top: 42px; }
-.pillar-arrow svg { width: 84px; height: auto; }
+.pillar-arrow { display: flex; align-items: center; color: #C8102E; flex-shrink: 0; padding-top: 30px; }
+.pillar-arrow svg { width: 150px; height: auto; }
 
 /* Results panel */
 .results-panel {
